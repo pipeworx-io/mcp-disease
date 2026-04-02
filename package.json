@@ -1,0 +1,18 @@
+{
+  "name": "@pipeworx/mcp-disease",
+  "version": "1.0.0",
+  "description": "MCP server for COVID-19 statistics via disease.sh API",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "disease", "covid", "health"],
+  "author": "Pipeworx <hello@pipeworx.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
