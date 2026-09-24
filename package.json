@@ -1,18 +1,32 @@
 {
   "name": "@pipeworx/mcp-disease",
-  "version": "1.0.0",
-  "description": "MCP server for COVID-19 statistics via disease.sh API",
+  "version": "1.0.1",
+  "description": "Disease MCP — wraps disease.sh API (COVID-19 statistics, no auth required)",
+  "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "files": ["src"],
+  "bin": {
+    "mcp-disease": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "disease"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-disease.git"
+  },
   "scripts": {
-    "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "disease", "covid", "health"],
-  "author": "Pipeworx <hello@pipeworx.io>",
-  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-8bb939988d8ab117742173de534f526d003597e998ae682bd303f4bd7da8b5d0",
+    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
   }
 }
