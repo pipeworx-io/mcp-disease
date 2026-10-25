@@ -10,7 +10,7 @@ import pack from './index.js';
 
 
 const server = new Server(
-  { name: '@pipeworx/mcp-disease', version: '1.0.3' },
+  { name: '@pipeworx/mcp-disease', version: '1.0.4' },
   { capabilities: { tools: {} } },
 );
 
