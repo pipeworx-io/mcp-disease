@@ -1,0 +1,59 @@
+[
+  {
+    "name": "get_global_stats",
+    "description": "Check worldwide COVID-19 totals. Returns cumulative cases, deaths, recovered, active cases, plus today's new cases and deaths.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "get_country_stats",
+    "description": "Check COVID-19 stats for a specific country (e.g., \"US\", \"India\", \"GB\"). Returns cases, deaths, recovered, active cases, today's change, and population.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "Country name or ISO code (e.g., \"USA\", \"germany\", \"gb\")"
+        }
+      },
+      "required": [
+        "country"
+      ]
+    }
+  },
+  {
+    "name": "get_historical",
+    "description": "Get daily COVID-19 timeline for a country or globally. Returns historical progression of cases, deaths, and recoveries by date.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "Country name or \"all\" for global data (default: \"all\")"
+        },
+        "days": {
+          "type": "number",
+          "description": "Number of days of history to return (default: 30)"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_vaccine_stats",
+    "description": "Check COVID-19 vaccination progress for a country or globally. Returns cumulative doses administered daily over the past 30 days.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "Country name to get vaccine data for. Omit for global totals."
+        }
+      },
+      "required": []
+    }
+  }
+]
